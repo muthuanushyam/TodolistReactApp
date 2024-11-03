@@ -44,11 +44,22 @@ const Todo = () => {
     const token = localStorage.getItem("token"); // Get the JWT token from local storage
 
     try {
+<<<<<<< HEAD
       const responseget = await axios.get("https://todolistreactapp-server.onrender.com/todos", {
         headers: {
           Authorization: `Bearer ${token}`, // Send token in Authorization header
         },
       });
+=======
+      const responseget = await axios.get(
+        "https://todolistreactapp-server.onrender.com/todos",
+        {
+          headers: {
+            Authorization: `Bearer ${token}`, // Send token in Authorization header
+          },
+        }
+      );
+>>>>>>> eb750c6 (rewired)
       console.log("Full Response:", responseget);
 
       const todosFromResponse = responseget.data.todos || []; // Use optional chaining to avoid errors
@@ -116,11 +127,22 @@ const Todo = () => {
     const token = localStorage.getItem("token"); // Get the token from local storage
 
     try {
+<<<<<<< HEAD
       await axios.delete(`https://todolistreactapp-server.onrender.com/todos/${todoId}`, {
         headers: {
           Authorization: `Bearer ${token}`, // Send the token in the Authorization header
         },
       });
+=======
+      await axios.delete(
+        `https://todolistreactapp-server.onrender.com/todos/${todoId}`,
+        {
+          headers: {
+            Authorization: `Bearer ${token}`, // Send the token in the Authorization header
+          },
+        }
+      );
+>>>>>>> eb750c6 (rewired)
 
       // Fetch the updated todos after deletion
       fetchTodos();

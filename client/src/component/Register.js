@@ -10,10 +10,20 @@ const Register = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
+<<<<<<< HEAD
       const response = await axios.post("https://todolistreactapp-server.onrender.com/register", {
         username,
         password,
       });
+=======
+      const response = await axios.post(
+        "https://todolistreactapp-server.onrender.com/register",
+        {
+          username,
+          password,
+        }
+      );
+>>>>>>> eb750c6 (rewired)
       setMessage(response.data.message);
     } catch (error) {
       setMessage(
