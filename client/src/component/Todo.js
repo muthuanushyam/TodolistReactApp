@@ -18,7 +18,7 @@ const Todo = () => {
 
     try {
       const response = await axios.post(
-        "http://localhost:8000/todos",
+        "https://todolistreactapp-server.onrender.com/todos",
         { todo: newTodo },
         {
           headers: {
@@ -44,7 +44,7 @@ const Todo = () => {
     const token = localStorage.getItem("token"); // Get the JWT token from local storage
 
     try {
-      const responseget = await axios.get("http://localhost:8000/todos", {
+      const responseget = await axios.get("https://todolistreactapp-server.onrender.com/todos", {
         headers: {
           Authorization: `Bearer ${token}`, // Send token in Authorization header
         },
@@ -68,7 +68,7 @@ const Todo = () => {
 
     try {
       // Build the URL based on the filter
-      let url = "http://localhost:8000/todos";
+      let url = "https://todolistreactapp-server.onrender.com/todos";
       if (filter === "completed") {
         url += "?completed=true";
       } else if (filter === "uncompleted") {
@@ -116,7 +116,7 @@ const Todo = () => {
     const token = localStorage.getItem("token"); // Get the token from local storage
 
     try {
-      await axios.delete(`http://localhost:8000/todos/${todoId}`, {
+      await axios.delete(`https://todolistreactapp-server.onrender.com/todos/${todoId}`, {
         headers: {
           Authorization: `Bearer ${token}`, // Send the token in the Authorization header
         },
@@ -136,7 +136,7 @@ const Todo = () => {
     try {
       // Assuming editingTodo contains the user's ID and the todo ID
       await axios.put(
-        `http://localhost:8000/todos/${editingTodo._id}`, // Adjusted URL to include userId
+        `https://todolistreactapp-server.onrender.com/todos/${editingTodo._id}`, // Adjusted URL to include userId
         {
           todo: updatedTodo,
           completed: updatedStatus, // Ensure the key matches what your backend expects
