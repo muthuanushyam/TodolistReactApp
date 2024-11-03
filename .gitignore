@@ -5,9 +5,7 @@ node_modules/
 *.log
 
 # Ignore environment variables and credentials
-.env
-.env.local
-.env.*.local
+
 *.pem      # Common key file format
 *.key      # SSH private key format
 *.crt      # SSL certificate files
