@@ -10,12 +10,6 @@ const Login = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-<<<<<<< HEAD
-      const response = await axios.post("https://todolistreactapp-server.onrender.com/login", {
-        username,
-        password,
-      });
-=======
       const response = await axios.post(
         "https://todolistreactapp-server.onrender.com/login",
         {
@@ -23,7 +17,6 @@ const Login = () => {
           password,
         }
       );
->>>>>>> eb750c6 (rewired)
 
       // Handle successful login
       setMessage(response.data.message);
